@@ -1,0 +1,43 @@
+.userList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Wider cards, similar to YouTube */
+    gap: 1.5rem; /* More spacing between items */
+    padding: 0;
+    list-style-type: none;
+}
+
+.userList li {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for a more card-like feel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.userList li:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.userList a {
+    display: block; /* Make the whole card clickable */
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color to keep text styling consistent */
+}
+
+.userList img {
+    width: 100%; /* Make image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a max height to prevent the image from becoming too large */
+    border-bottom: 2px solid #eee; /* Add a separator between image and text */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+.userList span {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.75rem; /* Add space between the image and the text */
+    font-size: 1.1rem; /* Increase font size slightly for readability */
+}
